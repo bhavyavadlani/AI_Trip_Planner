@@ -4,7 +4,7 @@ import datetime
 import os
 import glob
 
-BASE_URL = os.getenv("BACKEND_URL", "http://localhost:8000")  # Backend endpoint (set BACKEND_URL in env for production)
+BASE_URL = st.secrets.get("BACKEND_URL", os.getenv("BACKEND_URL", "http://localhost:8000"))  # Reads from Streamlit secrets or env var
 OUTPUT_DIR = "./output"
 
 # Set up page configurations
