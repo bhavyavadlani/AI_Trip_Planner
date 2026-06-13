@@ -4,7 +4,7 @@ import datetime
 import os
 import glob
 
-BASE_URL = "http://localhost:8000"  # Backend endpoint
+BASE_URL = os.getenv("BACKEND_URL", "http://localhost:8000")  # Backend endpoint (set BACKEND_URL in env for production)
 OUTPUT_DIR = "./output"
 
 # Set up page configurations
