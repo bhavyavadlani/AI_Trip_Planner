@@ -23,7 +23,7 @@ class QueryRequest(BaseModel):
     model_provider: str = "groq"
 
 @app.post("/query")
-async def query_travel_agent(query: QueryRequest):
+async def query_travel_agent(query: QueryRequest):#
     try:
         print(f"Received query: {query}")
         provider = query.model_provider if query.model_provider in ["groq", "openai"] else "groq"
